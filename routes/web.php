@@ -20,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Management;
 Route::get('/',[App\Http\Controllers\Management\RestaurantController::class,'index']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('/dashboard');
+})->name('dashboard');
+
+route::get('home', [App\Http\Controllers\Accounts\HomeController::class, 'index']);
