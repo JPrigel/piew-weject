@@ -25,3 +25,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 route::get('home', [App\Http\Controllers\Accounts\HomeController::class, 'index']);
+
